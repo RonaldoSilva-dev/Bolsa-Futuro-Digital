@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus links favoritos</title>
+  <style>
+    footer{
+      font-size: 16px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      gap: 15px;
+      padding: 10px;
+      background-color: #f1f1f1;
+    }
+    div.menu-bar ul ul {
+      display: none;
+    }
+
+    div.menu-bar li:hover > ul {
+      display: block;
+    }
+    .donate-button {
+      background-color: #4CAF50; /* Verde */
+      color: white;
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      /* Define a transição para a propriedade background-color.
+         Quando a cor de fundo mudar, a transição levará 0.3 segundos,
+         criando um efeito suave. */
+      transition: background-color 0.3s;
+        }
+
+        /* A pseudo-classe :hover é acionada quando o usuário
+       passa o cursor do mouse sobre o botão. */
+        .donate-button:hover {
+      /* Altera a cor de fundo do botão para um tom de verde mais escuro
+         quando o mouse está sobre ele, fornecendo feedback visual. */
+      background-color: #45a049;
+        }
