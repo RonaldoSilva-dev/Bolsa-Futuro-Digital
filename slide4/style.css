@@ -1,0 +1,23 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: aquamarine;
+    margin: 10px;
+    padding: 30px 20px 20px 30px;
+}
+
+h1 {
+    color: darkblue; /* Cor do título */
+}
+
+p {
+    font-size: 18px; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+img {
+    width: 100%; /* Define a largura da imagem para 100% do contêiner pai */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
