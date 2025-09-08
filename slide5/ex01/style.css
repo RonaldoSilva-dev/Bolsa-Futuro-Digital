@@ -1,0 +1,80 @@
+/*
+    Estilos para o corpo da página (body)
+    - Removidas propriedades redundantes e conflitantes.
+    - O espaçamento interno (padding) está sendo aplicado ao body, o que não é ideal. É melhor aplicá-lo ao .container.
+    - Removido 'font: bold;' para evitar sobrescrever 'font-size'.
+*/
+body {
+    background-image: url(imagens/img-código-programação4.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #000; /* Use uma cor de fallback sólida para caso a imagem não carregue */
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;   
+    margin: 0; /* Geralmente é melhor remover a margem padrão do body */    
+}
+
+/*
+    Estilos para o contêiner principal
+    - O container é o elemento central que contém todo o conteúdo.
+    - Aqui está a centralização e o espaçamento principal.
+*/
+.container {
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 20px 20px 30px; /* Seu padding original, aplicado aqui */
+    border-radius: 10px;
+}
+
+/*
+    Estilos para os cabeçalhos e parágrafos
+    - Sem grandes mudanças aqui, estão corretos.
+*/
+h2 {
+    color: crimson;
+    text-align: center;
+}
+
+p {
+    line-height: 1.5;
+    color: white;
+    text-align: justify; /* Mantenha se quiser, mas pode causar espaçamento irregular */
+}
+
+/*
+    Estilos para as imagens e legendas
+    - Removidas propriedades duplicadas.
+*/
+img {
+    display: block; /* Garante que a imagem seja um bloco para melhor alinhamento */ 
+    max-width: 100%; /* Esta propriedade não é necessária se o width já for 100% */   
+    height: auto;    
+}
+
+figcaption {
+    font-size: 0.8em; /* Aumentei um pouco para melhor legibilidade */
+    color: white;
+    text-align: center; /* Geralmente melhor para legendas do que justify */
+    margin-top: 10px;
+}
+
+/*
+    Estilos para o rodapé fixo
+    - Consolidado e ajustado para funcionar corretamente.
+*/
+footer {
+    position: fixed; /* Fixa o rodapé na tela */
+    bottom: 0; /* Fixa o rodapé na parte inferior da tela */
+    left: 0; /* Garante que o rodapé comece do lado esquerdo */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
+    text-align: right; /* Centraliza todo o conteúdo do rodapé */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    color: white; /* Cor do texto */
+    font-size: 0.8em; /* Tamanho da fonte menor */
+    font-style: italic; /* Texto em itálico */
+    padding: 15px 10px; /* Espaçamento vertical e horizontal interno */
+    border-top: 1px solid white; /* A linha superior para separar */
+    border-top-left-radius: 10px; /* Bordas arredondadas apenas na parte superior */
+    border-top-right-radius: 10px; /* Bordas arredondadas apenas na parte superior */
+}
