@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(147, 225, 228);
+}
+
+header {
+    background-color:blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+/* Estilos básicos para o contêiner principal do menu */
+.main-menu {
+    background-color: #879b2d; /* Cor de fundo para toda a barra de navegação */
+}
+
+/* Estilos para a lista principal do menu (<ul> dentro de .main-menu) */
+.main-menu > ul { /* O ">" garante que estamos selecionando apenas o UL DENTRO de .main-menu */
+    list-style-type: none; /* Remove os marcadores de lista padrão (bolinhas, quadrados) */
+    margin: 0; /* Remove a margem externa padrão da lista */
+    padding: 0; /* Remove o preenchimento interno padrão da lista */
+    display: flex; /* Faz com que os itens da lista (.main-menu > ul > li) se alinhem horizontalmente */
+    justify-content: center; /* Alinha os itens ao início do contêiner */    
+}
+
+/* Estilos para cada item de lista principal (<li> dentro de .main-menu > ul) */
+.main-menu > ul > li {
+    position: relative; /* ESSENCIAL! Define o ponto de referência para o posicionamento absoluto do submenu */
+}
+
+/* Estilos para os links dentro dos itens de lista principal */
+.main-menu > ul > li > a {
+    display: block; /* Faz o link ocupar todo o espaço do item, tornando-o clicável em toda a área */
+    padding: 15px 20px; /* Adiciona preenchimento interno ao redor do texto do link */
+    color: rgb(155, 9, 9); /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    white-space: nowrap; /* Impede que o texto do link quebre para a próxima linha */
+}
+
+/* Efeito hover para os links principais (muda a cor de fundo ao passar o mouse) */
+.main-menu > ul > li > a:hover {
+    background-color: #9b9999; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilos para o submenu (a segunda <ul> aninhada) */
+.submenu {
+    display: none; /* ESCONDE o submenu por padrão */
+    position: absolute; /* ESSENCIAL! Tira o submenu do fluxo normal do documento */
+    top: 100%; /* Posiciona o topo do submenu exatamente abaixo da borda inferior do item pai (<li>) */
+    left: 0; /* Alinha o lado esquerdo do submenu com o lado esquerdo do item pai */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para a exibição do submenu */
+    background-color: #cccaca; /* Cor de fundo do submenu */
+    min-width: 160px; /* Define uma largura mínima para o submenu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Adiciona uma sombra sutil para profundidade */
+    z-index: 1000; /* Garante que o submenu fique por cima de outros conteúdos da página */
+    list-style-type: none; /* Remove os marcadores de lista dos itens do submenu */
+    padding: 0; /* Remove o padding padrão do submenu */
+    margin: 0; /* Remove a margem padrão do submenu */
+}
+
+/* Estilos para os itens de lista dentro do submenu */
+.submenu li {
+    /* Não precisa de 'position: relative' aqui, pois não haverá sub-submenus neste exemplo */
+}
+
+/* Estilos para os links dentro do submenu */
+.submenu li a {
+    color: rgb(206, 12, 12); /* Cor do texto dos links do submenu */
+    padding: 12px 16px; /* Preenchimento interno para os links do submenu */
+    text-decoration: none; /* Remove o sublinhado */
+    display: block; /* Faz o link ocupar toda a largura do item do submenu */
+    text-align: left; /* Alinha o texto à esquerda */
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+/* Efeito hover para os links dentro do submenu */
+.submenu li a:hover {
+    background-color: #666666; /* Cor de fundo mais escura ao passar o mouse nos itens do submenu */
+}
+
+/* A "mágica" para mostrar o submenu: */
+/* Quando o mouse passa por cima do <li> com a classe 'has-submenu', */
+/* o .submenu que está dentro dele se torna visível (display: block). */
+.has-submenu:hover > .submenu {
+    display: block; /* Mostra o submenu */
+    
+}
+
+/* Seletor para adicionar a seta. Nada mudou aqui. */
+.has-submenu > a::after {
+    content: " ▼";
+    font-size: 0.6em;
+    margin-left: 5px;
+    /* A transição é importante para que o movimento seja suave. */
+    transform: rotate(0deg); /* Estado inicial (sem rotação) */
+    transition: transform 0.3s ease;
+}
+
+
+
+/*Essa parte desse código não funcionaou.
+/* O segredo está aqui:
+   Quando o mouse passar por cima do <li> com a classe .has-submenu,
+   a transformação de rotação será aplicada. */
+
+::after :hover {
+    transform: rotate(180deg);
+}
+
+/*
+
+.has-submenu:hover > a::after {
+    transform: rotate(180deg); /* Gira a seta 180 graus ao passar o mouse 
+    
+*/
