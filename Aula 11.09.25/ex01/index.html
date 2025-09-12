@@ -1,230 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condicionais para Iniciantes</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .container {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-        }
-        .example {
-            background-color: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 5px 5px 0;
-        }
-        code {
-            background-color: #eee;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-family: monospace;
-        }
-        .interactive {
-            background-color: #e8f4f8;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        input, button {
-            padding: 8px;
-            margin: 5px 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        .result {
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 4px;
-            display: none;
-        }
-        .true {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        .false {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-    </style>
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Condicionais em Programação</h1>
-        
-        <h2>O que é uma condição?</h2>
-        <p>Uma condição é uma comparação que pode resultar em <code>verdadeiro (true)</code> ou <code>falso (false)</code>.</p>
-        
-        <div class="example">
-            <h3>Exemplo de condições:</h3>
-            <p><code>idade >= 18</code> → Verdadeiro se a idade for 18 ou mais</p>
-            <p><code>temperatura < 0</code> → Verdadeiro se a temperatura for negativa</p>
-            <p><code>senha == "1234"</code> → Verdadeiro se a senha for "1234"</p>
-        </div>
-        
-        <h2>Bloco de Código</h2>
-        <p>É um conjunto de instruções dentro de <code>{ }</code> que só será executado se a condição for atendida.</p>
-        
-        <div class="example">
-            <h3>Estrutura básica do if (se):</h3>
-            <pre><code>if (condição) {
-    // Este código só executa
-    // se a condição for VERDADEIRA
-}</code></pre>
-        </div>
-        
-        <div class="example">
-            <h3>Estrutura if-else (se-senão):</h3>
-            <pre><code>if (condição) {
-    // Executa se a condição for VERDADEIRA
-} else {
-    // Executa se a condição for FALSA
-}</code></pre>
-        </div>
-        
-        <div class="interactive">
-            <h2>Experimente você mesmo!</h2>
-            <p>Digite sua idade e veja o resultado de diferentes condições:</p>
-            
-            <label for="idade">Sua idade:</label>
-            <input type="number" id="idade" min="0" max="120" value="18">-->
-            
-            <button onclick="testarCondicoes()">Testar Condições</button>
-            
-            <div id="resultado1" class="result">
-                <h4>Resultado para <code>idade >= 18</code>:</h4>
-                <p id="texto1"></p>
-            </div>
-            
-            <div id="resultado2" class="result">
-                <h4>Resultado para <code>idade >= 65</code>:</h4>
-                <p id="texto2"></p>
-            </div>
-            
-            <div id="resultado3" class="result">
-                <h4>Resultado para <code>idade < 12</code>:</h4>
-                <p id="texto3"></p>
-            </div>
-        </div>
-        
-        <h2>Condicionais Múltiplas</h2>
-        <p>Podemos testar várias condições usando <code>else if</code>:</p>
-        
-        <div class="example">
-            <pre><code>if (idade < 12) {
-    console.log("Criança");
-} else if (idade < 18) {
-    console.log("Adolescente");
-} else if (idade < 60) {
-    console.log("Adulto");
-} else {
-    console.log("Idoso");
-}</code></pre>
-        </div>
-        
-        <div class="interactive">
-            <h2>Classifique sua idade:</h2>
-            <button onclick="classificarIdade()">Classificar</button>
-            
-            <div id="classificacao" class="result"></div>
-        </div>
-    </div>
+    <header>
+        <h1>Meus menus</h1>
+        <nav class="main-menu">
+            <ul>
+                <li class="has-submenu"><a href="#">Home</a></li> 
+                <li class="has-submenu">
+                <a href="#">Serviços</a>
+                <ul class="submenu">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Desenvolvimento</a></li>
+                    <li><a href="#">SEO</a></li>
+                </ul>
+                </li>
+                <li class="has-submenu"><a href="#">Sobre Nós</a></li>
+                <li class="has-submenu"><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        function testarCondicoes() {
-            // Obter a idade do input
-            const idade = parseInt(document.getElementById('idade').value);
-            
-            // Testar primeira condição: idade >= 18
-            const resultado1 = idade >= 18;
-            const elem1 = document.getElementById('resultado1');
-            const texto1 = document.getElementById('texto1');
-            
-            elem1.style.display = 'block';
-            if (resultado1) {
-                elem1.className = 'result true';
-                texto1.textContent = `Verdadeiro! Você tem ${idade} anos, que é maior ou igual a 18.`;
-            } else {
-                elem1.className = 'result false';
-                texto1.textContent = `Falso! Você tem ${idade} anos, que é menor que 18.`;
-            }
-            
-            // Testar segunda condição: idade >= 65
-            const resultado2 = idade >= 65;
-            const elem2 = document.getElementById('resultado2');
-            const texto2 = document.getElementById('texto2');
-            
-            elem2.style.display = 'block';
-            if (resultado2) {
-                elem2.className = 'result true';
-                texto2.textContent = `Verdadeiro! Você tem ${idade} anos, que é maior ou igual a 65.`;
-            } else {
-                elem2.className = 'result false';
-                texto2.textContent = `Falso! Você tem ${idade} anos, que é menor que 65.`;
-            }
-            
-            // Testar terceira condição: idade < 12
-            const resultado3 = idade < 12;
-            const elem3 = document.getElementById('resultado3');
-            const texto3 = document.getElementById('texto3');
-            
-            elem3.style.display = 'block';
-            if (resultado3) {
-                elem3.className = 'result true';
-                texto3.textContent = `Verdadeiro! Você tem ${idade} anos, que é menor que 12.`;
-            } else {
-                elem3.className = 'result false';
-                texto3.textContent = `Falso! Você tem ${idade} anos, que é maior ou igual a 12.`;
-            }
-        }
-        
-        function classificarIdade() {
-            const idade = parseInt(document.getElementById('idade').value);
-            const classificacaoElem = document.getElementById('classificacao');
-            
-            classificacaoElem.style.display = 'block';
-            
-            if (idade < 0) {
-                classificacaoElem.className = 'result false';
-                classificacaoElem.innerHTML = '<h4>Idade inválida!</h4><p>Por favor, digite uma idade válida.</p>';
-            } else if (idade < 12) {
-                classificacaoElem.className = 'result true';
-                classificacaoElem.innerHTML = '<h4>Classificação: Criança</h4><p>Você é uma criança!</p>';
-            } else if (idade < 18) {
-                classificacaoElem.className = 'result true';
-                classificacaoElem.innerHTML = '<h4>Classificação: Adolescente</h4><p>Você é um adolescente!</p>';
-            } else if (idade < 60) {
-                classificacaoElem.className = 'result true';
-                classificacaoElem.innerHTML = '<h4>Classificação: Adulto</h4><p>Você é um adulto!</p>';
-            } else {
-                classificacaoElem.className = 'result true';
-                classificacaoElem.innerHTML = '<h4>Classificação: Idoso</h4><p>Você é um idoso!</p>';
-            }
-        }
-    </script>
 </body>
 </html>
