@@ -201,6 +201,12 @@ footer nav ul li a:hover {
     border-bottom: 2px solid #555; /* Adiciona uma linha na parte de baixo do título */
     padding-bottom: 0.5rem; /* Adiciona um espaço entre o título e a linha */
 }
+.footer-p {
+    font-size: 1rem;
+    color: rgb(150, 26, 26);
+    
+    
+}
 
 /* Ajusta o layout em telas menores para que as colunas se empilhem */
 @media (max-width: 600px) {
