@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+    /* -------------------------- */
+    /* Estilos Gerais e Reset     */
+    /* -------------------------- */
+
+    /* Reset básico para garantir consistência entre navegadores */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4; /* Cor de fundo suave */
+        color: #333;
+    }
+
+    /* -------------------------- */
+    /* Layout da Página           */
+    /* -------------------------- */
+
+    /* Centraliza o conteúdo da página */
+    .container {
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* -------------------------- */
+    /* Estilos do Cabeçalho       */
+    /* -------------------------- */
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    /* -------------------------- */
+    /* Estilos das Seções         */
+    /* -------------------------- */
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: #555;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+    }
+
+    /* -------------------------- */
+    /* Estilos para Listas        */
+    /* -------------------------- */
+
+    ul, ol {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    ul li, ol li {
+        margin-bottom: 5px;
+    }
+
+    /* -------------------------- */
+    /* Estilos do Botão           */
+    /* -------------------------- */
+
+    #botaoApresentar {
+        background-color: #007bff; /* Cor primária do botão */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease; /* Transição suave */
+    }
+
+    #botaoApresentar:hover {
+        background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    }
+
+    /* -------------------------- */
+    /* Estilos do Rodapé          */
+    /* -------------------------- */
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .footer-container {
+        display: flex; /* Layout flexível para as colunas */
+        justify-content: space-around;
+        flex-wrap: wrap; /* Permite que as colunas quebrem a linha */
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-col {
+        flex: 1; /* Distribui o espaço igualmente entre as colunas */
+        min-width: 200px; /* Garante que as colunas não fiquem muito estreitas */
+        margin-bottom: 20px;
+    }
+
+    .footer-col h3 {
+        margin-top: 0;
+    }
+
+    .footer-col ul {
+        list-style: none; /* Remove os marcadores de lista */
+        padding: 0;
+    }
+
+    .footer-col a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer-col a:hover {
+        text-decoration: underline;
+    }
+
+    /* -------------------------- */
+    /* Responsividade             */
+    /* -------------------------- */
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column; /* Coloca as colunas do rodapé uma abaixo da outra em telas menores */
+            text-align: center;
+        }
+
+        .footer-col {
+            margin-bottom: 15px;
+        }
+    }
+</style>
+
+</head>
+<body>    <!--Todo o código foi sugerido por IA após mesclar o código do exercício e o que tinha feito, respectivamente pg02 e index.-->
+    <header>
+        <h1>Meu Perfil Completo</h1>
+    </header>
+
+    <main>
+        <article class="container">
+            <section>
+                <div>
+                    <h2>Apresentação</h2>
+                    <!-- A tag button é a mais semântica e acessível para a interação -->
+                    <button id="botaoApresentar">Clique para se apresentar.</button>
+                    <!-- O elemento de parágrafo agora será atualizado pelo JavaScript -->
+                    <p id="res"></p>
+                </div>
+
+                <div>
+                    <h2>Sobre mim</h2>
+                    <p id="servidor">Servidor público concursado na área de segurança pública da Cidade do Recife desde 2008.</p>
+                    <p>Mas já foi servidor do Estado de Pernambuco na área de segurança pública entre janeiro e agosto de 2008, quando integrou o Quadro da Polícia Científica.</p>
+                    <p class="formação">Formação acadêmica: Bacharel em Direito pelo Centro Universitário Maurício de Nassau, diplomado no ano de 2014.</p> 
+                    <p>Aprovado no exame da OAB, ano 2013.</p>
+                    <img id="img-oab" src="../imagens/img-oab.webp" width="600" height="600" title="Certificado OAB" alt="Foto do certificado de aprovação da OAB no ano de 2013.">
+                </div>
+
+                <div>
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Viajar</li>
+                        <li>Ler</li>
+                        <li>Ouvir músicas</li>
+                        <li>Praticar esportes</li>
+                        <li>Conectar-se com a natureza.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Minhas metas para esse ano</h2>
+                    <ol>
+                        <li>Estudar mais HTML</li>
+                        <li>Estudar mais CSS</li> 
+                        <li>Estudar mais JavaScript</li>
+                        <li>Desenvolver um projeto pessoal.</li>
+                    </ol>
+                </div>
+            </section>        
+        </article>
+    </main>
+            
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3><span style="font-weight: bold; color: brown; font-family: Arial, Helvetica, sans-serif; font-size: 1.5rem;">&COPY;</span> Copyright 2025 Ronaldo Silva.</h3>
+                <div class="footer-p">
+                    <p>Página criada durante o curso de Front-End</p>
+                    <p>Todos os direitos reservados.</p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Redes Sociais</h3>
+                <nav>
+                    <ul>
+                        <li><a href="https://github.com/RonaldoSilva-dev" title="GitHub" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://www.instagram.com/hwnaldinho_" title="Instagram" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/gcmronaldosilva" title="Facebook" target="_blank" rel="noopener">Facebook</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>E-mail: ronaldosilvadev@hotmail.com</p>
+                <p>Telefone: (81) 98824-4387</p>
+            </div>
+        </div>
+    </footer>
+
+<!--Comentário IA-->
+    <!--
+        Explicação das melhorias no HTML
+        <button> no lugar de <div>: A tag <button> foi usada para a interação, o que é mais semântico e acessível. leitores de tela e outros dispositivos assistivos reconhecem a função de um botão, o que não acontece com uma div.
+        Melhoria nos links: O atributo target="_blank" foi adicionado aos links de redes sociais. O valor correto para abrir o link em uma nova aba é _blank, e não _parent.
+        Estrutura semântica: A marcação continua semanticamente correta, usando elementos como <header>, <main>, <article>, <section> e <footer> para estruturar a página.
+    -->
+<!--Código JS-->
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        // 1. Obtém as referências dos elementos HTML usando seus IDs
+        const botao = document.getElementById("botaoApresentar");
+        const resultado = document.getElementById("res");
+    
+        // 2. Anexa um "ouvinte de evento" ao botão
+        // Esta é a maneira mais moderna e flexível de lidar com eventos
+        botao.addEventListener("click", apresentar);
+    
+        // 3. Define a função que será executada quando o evento de clique ocorrer
+        function apresentar() {
+            // Usa `let` para variáveis que podem ser reatribuídas
+            let nome = window.prompt("Qual é o seu nome?");
+    
+            // 4. Valida a entrada do usuário para o nome
+            if (!nome) { // Checa se a string está vazia ou null (cancelado)
+                window.alert('Você não informou seus dados.');
+                return; // Interrompe a função se a entrada for inválida
+            }
+    
+            let idade = window.prompt("Quantos anos você tem?");
+    
+            // 5. Valida a entrada do usuário para a idade
+            if (!idade) { // Checa se a string está vazia ou null (cancelado)
+                window.alert('Você não informou seus dados.');
+                return; // Interrompe a função se a entrada for inválida
+            }
+    
+            // 6. Exibe a mensagem de alerta com os dados inseridos
+            window.alert(`Olá, é um prazer em te conhecer ${nome}! Você tem ${idade} anos. Seja bem-vindo(a) ao meu site!`);
+    
+            // 7. Atualiza o conteúdo de texto do parágrafo de resultado
+            resultado.textContent = `Olá, ${nome}! Seja bem-vindo(a)! Apresento-me da forma que se segue:`;
+        }
+    });
+</script>
+<!--Comentário IA-->
+<!--
+    Explicação linha a linha do JavaScript
+    document.addEventListener("DOMContentLoaded", ...):
+    Propósito: Garantir que o script só seja executado quando todo o HTML da página tiver sido carregado. Isso evita erros caso o script tente interagir com elementos que ainda não existem no momento da execução.
+    const botao = document.getElementById("botaoApresentar");:
+    const: Usa-se const para variáveis que não serão reatribuídas.
+    document.getElementById(): Seleciona o elemento com o id="botaoApresentar". Essa é uma forma eficiente de obter uma referência a um único elemento.
+    const resultado = document.getElementById("res");:
+    Faz o mesmo que a linha acima, mas para o parágrafo onde o resultado será exibido.
+    botao.addEventListener("click", apresentar);:
+    addEventListener(): Este método anexa uma função (o listener ou ouvinte) a um evento específico ("click").
+    apresentar: É o nome da função que será executada quando o botão for clicado. Note que a função é passada como referência, sem parênteses.
+    function apresentar() { ... }:
+    Definição da função: O código que será executado quando o evento de clique for disparado.
+    let nome = window.prompt(...):
+    let: Usa-se let para variáveis que podem ter seu valor modificado, embora neste caso específico, const também funcionaria.
+    window.prompt(...): Exibe uma caixa de diálogo para que o usuário insira um valor.
+    if (!nome):
+    Validação robusta: A condição !nome é uma forma concisa de verificar se o usuário cancelou o prompt (resultando em null) ou deixou o campo vazio (resultando em uma string vazia "").
+    return;:
+    Parada da execução: Esta instrução interrompe a execução da função apresentar(). Se o usuário não informar o nome ou a idade, o restante do código não é executado, evitando que a lógica prossiga.
+    window.alert(...):
+    Template literals: Usa-se template literals (com as crases `) para construir a string de alerta. Isso permite incluir variáveis (${nome}) diretamente na string, de forma mais clara e fácil de ler.
+    resultado.textContent = ...:
+    textContent: Atualiza o conteúdo de texto de um elemento. Usar textContent em vez de innerHTML é mais seguro, pois impede a injeção de código malicioso.
+-->
+</body>
+</html>

@@ -1,0 +1,259 @@
+ /* Importa uma fonte do Google Fonts para um visual mais moderno e limpo */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* --- Estilização Geral e Reset --- */
+
+/* Aplica a fonte 'Roboto' e remove a margem e o preenchimento padrão do navegador em todas as tags */
+body {
+    font-family: 'Roboto', sans-serif; /* Define a fonte principal para a página */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o preenchimento padrão do body */
+    line-height: 1.6; /* Aumenta a altura da linha para melhorar a leitura do texto */
+    background-color: rgb(94, 209, 209); /* Define uma cor de fundo suave para toda a página */
+    color: #333; /* Define a cor padrão do texto */
+}
+
+/* Define um estilo padrão para todos os links */
+a {
+    color: #007bff; /* Cor azul para os links, fácil de identificar */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a cor do link ao passar o mouse */
+}
+
+/* Mudar a cor do link quando o mouse passa por cima (efeito hover) */
+a:hover {
+    color: #0056b3; /* Uma tonalidade mais escura de azul para o efeito hover */
+}
+
+/* --- Estilização do Header (Cabeçalho) --- */
+
+header {
+    background-color: rgba(10, 10, 148, 0.65); /* Cor de fundo escura para o cabeçalho */
+    color: #fff; /* Cor do texto branca */
+    padding: 1rem 0; /* Preenchimento interno (1rem em cima/baixo, 0 nas laterais) */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave na parte inferior */   
+}
+
+/* Estiliza o título principal dentro do cabeçalho */
+header h1 {
+    margin: 0 auto; /* Remove a margem padrão do h1 */
+    font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+}
+
+/* --- Estilização da Seção Principal --- */
+
+/* Define o layout principal, centralizando o conteúdo */
+main {
+    padding: 2rem; /* Adiciona preenchimento interno à seção principal */
+    max-width: 960px; /* Define uma largura máxima para o conteúdo */
+    margin: auto; /* Centraliza o conteúdo na página */
+}
+
+/* Estiliza a classe 'container' */
+.container {
+    background-color: #fff; /* Cor de fundo branca para o container */
+    padding: 2rem; /* Preenchimento interno */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de elevação */
+}
+
+/* Estiliza as seções dentro do container */
+section {
+    display: flex; /* Transforma a seção em um container flexível */
+    flex-direction: column; /* Organiza os itens em coluna (um embaixo do outro) */
+    gap: 2rem; /* Adiciona um espaçamento entre os elementos */
+}
+
+#area {    
+    background-color: lightblue; /* Cor de fundo */
+    width: 300px; /* Largura fixa */
+    height: 50px; /* Altura fixa */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 0 auto; /* Centraliza horizontalmente com margem automática */   
+    border-radius: 12px; /* Borda arredondada */    
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+#area h2 {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */    
+    align-items: center;   
+    margin: 0; /* Remove a margem padrão do h2 */
+    border: none;
+}
+
+#area:hover {
+    background-color: #007bff; /* Muda a cor de fundo ao passar o mouse */    
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona uma transição suave para as mudanças de cor */
+}
+
+#area:hover h2 {
+    color: white; /* Muda a cor do texto ao passar o mouse */
+}
+
+#res {
+    margin: 0;  
+    width: auto;
+    height: auto;
+    color: red;    
+    border-radius: 12px;
+    padding: 10px 20px;    
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center;    
+}
+
+/* Estiliza os divs dentro da seção */
+section > div {
+    background-color: #f9f9f9; /* Cor de fundo suave para cada bloco de conteúdo */
+    padding: 1.5rem; /* Preenchimento interno */
+    border-radius: 6px; /* Borda levemente arredondada */
+}
+
+/* Estiliza os títulos de cada seção */
+section h2 {
+    color: #333; /* Cor do texto */
+    border-bottom: 2px solid #ccc; /* Adiciona uma linha na parte de baixo do título */
+    padding-bottom: 0.5rem; /* Adiciona um espaço entre o título e a linha */
+    margin-top: 0; /* Remove a margem superior */
+}
+
+#servidor {
+    border-style: dotted; 
+    background-color: yellow;
+    border-color: rgb(143, 199, 30);
+}
+
+.formação {
+    background-color: #12a7c2;
+    border-style: groove;
+    border-color: rebeccapurple;
+}
+
+.container section #img-oab {
+    border-radius: 50%;
+} 
+/* Estiliza as imagens */
+img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do seu container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem não tenha espaços extras indesejados */
+    border-radius: 6px; /* Borda arredondada nas imagens */
+    margin-top: 1rem; /* Adiciona margem superior */
+}
+
+/* Estiliza a lista de hobbies */
+ul {
+    list-style-type: disc; /* Define o estilo dos marcadores da lista como discos (padrão) */
+    padding-left: 20px; /* Adiciona um preenchimento à esquerda para o marcador */
+    color: green; /*Lista texto verde*/
+}
+
+/* --- Estilização do Footer (Rodapé) --- */
+
+footer {
+    background-color: #12a7c2; /* Cor de fundo escura */
+    color: rgb(150, 26, 26); /* Cor do texto branca */
+    padding: 2rem; /* Preenchimento interno */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 2rem; /* Adiciona uma margem superior para separá-lo do conteúdo */
+}
+
+/* Estiliza a navegação de redes sociais dentro do footer */
+footer nav ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    display: flex; /* Habilita o Flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 1.5rem; /* Adiciona espaço entre os itens da lista */
+    margin: 1rem 0 0; /* Adiciona uma margem acima da lista */
+}
+
+/* Estiliza os links dentro da lista de redes sociais */
+footer nav ul li a {
+    color: rgb(150, 26, 26); /* Cor do texto branca */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Mudar a cor dos links no footer ao passar o mouse */
+footer nav ul li a:hover {
+    color: #007bff; /* Cor azul ao passar o mouse */
+}
+
+/* --- Media Queries para Responsividade --- */
+
+
+/* Quando a tela tiver 768px ou menos, os blocos de conteúdo se adaptam */
+@media (max-width: 768px) {
+    /* Define o alinhamento da seção no cabeçalho */
+    header {
+        padding: 1rem; /* Diminui o preenchimento do cabeçalho */
+    }
+
+    /* Reduz a margem do main em telas menores */
+    main {
+        padding: 1rem;
+    }
+
+    /* Muda a direção dos itens para coluna, garantindo que eles se empilhem */
+    section {
+        flex-direction: column;
+    }
+
+    /* Alinha o texto para a esquerda em telas menores para melhor legibilidade */
+    footer {
+        text-align: left;
+    }
+
+    /* Muda o layout da lista de redes sociais para coluna em telas menores */
+    footer nav ul {
+        flex-direction: column;
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+}
+
+/* --- Estilização do Footer de 3 Colunas (opcional) --- */
+
+/* Estiliza o container principal do footer, usando Flexbox para as colunas */
+.footer-container {
+    display: flex; /* Habilita o Flexbox */
+    justify-content: space-between; /* Distribui o espaço entre as colunas */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo em telas pequenas */
+    padding: 2rem; /* Preenchimento interno */
+    max-width: 960px; /* Define a largura máxima para alinhar com o 'main' */
+    margin: auto; /* Centraliza o container */
+    gap: 1.5rem; /* Adiciona um espaço entre as colunas */
+}
+
+/* Estiliza cada coluna do footer */
+.footer-col {
+    flex: 1; /* Faz com que cada coluna ocupe uma parte igual do espaço disponível */
+    min-width: 200px; /* Define uma largura mínima para as colunas */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estiliza os títulos das colunas do footer */
+.footer-col h3 {
+    color: rgb(150, 26, 26); /* Cor do texto branca */
+    border-bottom: 2px solid #555; /* Adiciona uma linha na parte de baixo do título */
+    padding-bottom: 0.5rem; /* Adiciona um espaço entre o título e a linha */
+}
+.footer-p {
+    font-size: 1rem;
+    color: rgb(150, 26, 26);
+    
+    
+}
+
+/* Ajusta o layout em telas menores para que as colunas se empilhem */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column; /* Organiza os itens em coluna */
+        gap: 2rem; /* Adiciona um espaçamento maior entre os itens */
+    }
+
+    .footer-col {
+        min-width: 100%; /* Faz com que as colunas ocupem toda a largura disponível */
+    }
+}

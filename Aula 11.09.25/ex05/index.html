@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu perfil completo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS */
+        .copyright-symbol {
+            font-weight: bold;
+            color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>        
+        <h1>Meu Perfil Completo</h1>        
+    </header>
+    <main>
+        <article class="container">
+            <section>
+                <div id="area">
+                    <h2>Clique para se apresentar.</h2>             
+                </div>                
+                    <p id="res"></p>               
+                <div>
+                    <h2>Apresentação</h2>
+                    <p id="servidor">Servidor público concursado na área de segurança pública da Cidade do Recife desde 2008.</p>
+                    <p>Mas já foi servidor do Estado de Pernambuco na área de segurança pública entre janeiro e agosto de 2008, quando integrou o Quadro da Polícia Científica.</p>
+                    <p class="formacao">Formação acadêmica: Bacharel em Direito pelo Centro Universitário Maurício de Nassau, diplomado no ano de 2014.</p> 
+                    <p>Aprovado no exame da OAB, ano 2013.</p>
+                    <img id="img-oab" src="../imagens/img-oab.webp" width="600" height="600" title="Certificado OAB" alt="Foto do certificado de aprovação da OAB no ano de 2013.">
+                </div>                                        
+                <div>
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Viajar</li>
+                        <li>Ler</li>
+                        <li>Ouvir músicas</li>
+                        <li>Praticar esportes</li>
+                        <li>Conectar-se com a natureza.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Minhas metas para esse ano</h2>
+                    <ol>
+                        <li>Estudar mais HTML</li>
+                        <li>Estudar mais CSS</li> 
+                        <li>Estudar mais JavaScript</li>
+                        <li>Desenvolver um projeto pessoal.</li>
+                    </ol>
+                </div>                
+            </section>
+        </article>           
+    </main>            
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>&COPY; Copyright 2025 Ronaldo Silva.</h3>
+                <div class="footer-p">
+                    <p>Página criada durante o curso de Front-End</p>
+                    <p>Todos os direitos reservados.</p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                                
+                <h3>Redes Sociais</h3>
+                <nav>
+                    <ul>
+                        <li><a href="https://github.com/RonaldoSilva-dev" title="GitHub" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://www.instagram.com/hwnaldinho_" title="Instagram" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/gcmronaldosilva" title="Facebook" target="_blank" rel="noopener">Facebook</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>E-mail: ronaldosilvadev@hotmail.com</p>
+                <p>Telefone: (81) 98824-4387</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const area = document.getElementById("area"); // Obtém o elemento com o ID "area" e armazena na variável "area".
+        const resultado = document.getElementById("res");
+        area.addEventListener("click", clicar);
+        function clicar() {           
+            let nome = window.prompt("Qual é o seu nome?");
+
+            // Verificamos se o nome não foi informado (se o usuário clicou em Cancelar ou deixou em branco)
+            if (nome === null || nome === "") {
+                window.alert('Você não informou seus dados.');
+                // Interrompemos a execução da função para que o próximo prompt não apareça
+                return; 
+            }        
+
+            let idade = window.prompt("Quantos anos você tem?");
+
+            // Verificamos se a idade não foi informada
+            if (idade === null || idade === "") {
+                window.alert('"Você não informou seus dados."');
+                return;
+            }
+
+            window.alert(`Olá, é um prazer em te conhecer ${nome}! Você tem ${idade} anos. Seja bem-vindo(a) ao meu site!`);
+            
+            resultado.textContent = `Olá, ${nome}! Seja bem-vindo(a)! Apresento-me da forma que se segue:`;
+        }
+
+        
+    </script>
+</body>
+</html>
