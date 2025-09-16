@@ -3,9 +3,7 @@ let idade = 32;
 
 alert('Olá, ' + nome +'! ' + 'Você tem ' + idade +' anos.');
 
-//window.document.write(`Olá, ${nome}! Você tem ${idade} anos.`)
 
-// Substitua document.write por innerHTML
 document.body.innerHTML += `Olá, ${nome}! Você tem ${idade} anos.`;
 
 

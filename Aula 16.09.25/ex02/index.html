@@ -6,6 +6,52 @@
     <title>Exercício 2</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Exercício 2</h1>
+    </header>
+    <main>
+        <label for="idade">Digite sua idade:</label>
+        <input type="number" name="idade" id="idade">
+        <input type="button" value="Verificar" id="verificarBtn">
+    </main>
+
+    <script>
+        // 1. Obtém o elemento de input com o id 'idade'.
+        let idadeInput = document.getElementById('idade');
+
+        // 2. Obtém o botão com o id 'verificarBtn'.
+        let verificarBtn = document.getElementById('verificarBtn');
+
+        // 3. Adiciona um "ouvinte de evento" (event listener) ao botão.
+        verificarBtn.addEventListener('click', function() {
+
+        // 4. Pega o valor do input (que é uma string) e o converte para um número.
+        let idade = Number(idadeInput.value);
+
+        // 5. Verifica se a idade não é um número válido ou se é zero.
+        if (isNaN(idade) || idade === 0) {
+            // 6. Se a condição for verdadeira, mostra um alerta.
+            alert("Por favor, digite uma idade válida.");
+            // 7. Interrompe a execução da função.
+            return; 
+        }
+
+        // 8. Chama a função `verificarIdade` passando a idade como argumento.
+        verificarIdade(idade);
+    });
+
+// 9. Declara a função `verificarIdade` que recebe um parâmetro chamado `idade`.
+function verificarIdade(idade) {
+
+    // 10. Verifica se a idade é maior ou igual a 18.
+    if (idade >= 18) {
+        // 11. Se for maior ou igual, exibe um alerta de maior de idade.
+        alert(`Olá, você com ${idade} anos é maior de idade.`);
+    } else {
+        // 12. Se a idade for menor que 18, exibe um alerta de menor de idade.
+        alert(`Olá, você com ${idade} anos é menor de idade.`);
+    }
+}
+    </script>
 </body>
 </html>
