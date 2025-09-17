@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JS</title>
+</head>
+<body>
+    <header>
+        <h1>Exercício 2</h1>
+    </header>
+    <main>
+        <h2>Exercício 2 – Funções</h2>
+        <p>Crie uma função que receba a idade e diga se a pessoa é maior ou menor de idade, usando alert().
+            Passo a passo:</p>
+        <ol>
+            <li>Criar a função com o nome verificarIdade.</li>
+            <li>Adicionar um parâmetro chamado idade.</li>
+            <li>Usar um if/else para verificar se a idade é >= 18.</li>
+            <li>Mostrar o resultado com alert().</li>
+        </ol>
+        <h2>Resposta</h2>
+        <label for="idade">Digite sua idade:</label>
+        <input type="number" name="idade" id="idade">
+        <button type="button" onclick="verificarIdade()">verificar</button>
+        
+    </main>
+    <footer>
+
+    </footer>
+    <script>       
+        
+        function verificarIdade() {
+            let textoIdade = window.document.getElementById('idade');
+            let idade = Number(textoIdade.value);
+            if (idade >= 18){
+                alert('Seja bem-vindo! Você com ' + idade + ' anos é maior de idade.')
+            } else{
+                alert('Seja bem vindo! Você com ' + idade + ' anos é menor de idade.')
+            }
+        }
+        
+    </script>
+</body>
+</html>

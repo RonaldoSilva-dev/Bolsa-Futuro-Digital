@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 3</title>
+</head>
+<body>
+    <header>
+        <h1>Teste 3 exercício 1</h1>
+    </header>
+    <main>
+        <h2>Exercício 1 – Variáveis e alert</h2>
+        <h3>Objetivo:</h3>
+        <ul>
+            <li>Criar duas variáveis (nome e idade)</li>
+            <li>Mostrar uma mensagem usando alert(), combinando texto fixo com as variáveis.</li>
+        </ul>
+        <h2>Resposta</h2>
+        <p>
+            <label for="nome">Digite seu nome:</label>
+            <input type="text" name="nome" id="nome">
+        </p>
+        <p>
+            <label for="idade">Digite sua idade:</label>
+            <input type="number" name="idade" id="idade">
+        </p>
+       <button type="button" onclick="nomeIdade()" id="enviar">enviar</button>
+        <p id="res">Aparecerá aqui o resultado.</p>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        /*
+        function nomeIdade(){
+            let nome = document.getElementById('nome').value;
+            let idade = Number(document.getElementById('idade').value);
+            let resultado = document.getElementById('res')
+            alert(`Olá, ${nome} é um prazer te conhecer. A sua idade é ${idade} anos.`)            
+            resultado.innerText = `Olá, ${nome} é um prazer te conhecer, você tem ${idade} anos.`
+        }
+        */
+       // Outra forma de fazer o bloco acima
+        addEventListener(click, nomeIdade)
+        function nomeIdade(){
+            let nome = document.getElementById('nome').value;
+            let idade = Number(document.getElementById('idade').value);
+            const enviar = document.getElementById('enviar')
+            let resultado = document.getElementById('res')
+            alert(`Olá, ${nome} é um prazer te conhecer. A sua idade é ${idade} anos.`)            
+            resultado.innerText = `Olá, ${nome} é um prazer te conhecer, você tem ${idade} anos.`
+        }
+
+    </script>
+</body>
+</html>

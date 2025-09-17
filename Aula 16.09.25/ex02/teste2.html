@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 2</title>
+</head>
+<body>
+    <header>
+        <h1>Teste 2 exercício 2</h1>
+    </header>
+    <main>
+        <label for="idade">Digite sua idade:</label>
+        <input type="number" name="idade" id="idade">
+        <button type="button" id="verificar">Verificar</button>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const btn = document.getElementById('verificar');
+        btn.addEventListener('click', verificarIdade); 
+        
+        function verificarIdade(){
+            let txtidade = document.getElementById('idade');
+            let idade = Number(txtidade.value);
+            if(isNaN(idade) || idade <= 0){
+                alert('Digite uma idade válida!')
+                return;
+            }         
+                     
+            if (idade >= 18){
+                alert('Você é maior de idade.')
+            } else {
+                alert('Você é menor de idade.')
+            }
+        }        
+    </script>
+</body>
+</html>
