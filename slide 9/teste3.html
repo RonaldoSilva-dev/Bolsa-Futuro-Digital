@@ -22,7 +22,7 @@
         const corInput = document.getElementById('inputCor');
         const res = document.getElementById('res');
 
-        corInput.ddEventListener('click', verificar);
+        btn.addEventListener('click', verificar);
 
         function verificar() {
 
@@ -39,9 +39,7 @@
                 break;
             default:
                 res.textContent = 'Cor não reconhecida.';}
-        }
-
-        
+        }        
     </script>
 </body>
 </html>
