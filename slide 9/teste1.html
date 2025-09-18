@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 1</title>
+</head>
+<body>
+    <header>
+        <h1>Teste 1</h1>
+    </header>
+    <main>
+        <h2>Exercício slide 9 da aula 9</h2>
+        <h3>Se chove? Sim ou não.</h3>
+        <label for="chuva">Está chovendo?</label>     
+        <button type="button" id="sim">sim</button>
+        <button type="button" id="nao">não</button>
+        <p id="res">...</p>
+    </main>
+    <footer></footer>
+    <script>
+        const btnSim = document.getElementById('sim');
+        const btnNao = document.getElementById('nao');
+        const res = document.getElementById('res');
+        
+        sim.addEventListener('click', verificar);
+        nao.addEventListener('click', verificar);
+
+        function verificar() {
+            if(event.target.id == 'sim') {
+                res.textContent = `Levar guarda chuva.`;
+            } else {
+                res.textContent = `Sair sem guarda chuva.`;
+            }
+        }
+    </script>
+</body>
+</html>

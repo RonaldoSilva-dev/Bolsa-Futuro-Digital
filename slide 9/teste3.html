@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 3</title>
+</head>
+<body>
+    <header>
+        <h1>Exercício no slide 11 da aula 9</h1>
+    </header>
+    <main>
+        <label for="cor">Digite uma cor:</label>
+        <input type="text" name="cor" id="inputCor">
+        <button type="button" id="btnVerificar">verificar</button>
+        <p id="res">...</p>
+
+    </main>
+    <footer></footer>
+    <script>
+        const btn = document.getElementById('btnVerificar');
+        const corInput = document.getElementById('inputCor');
+        const res = document.getElementById('res');
+
+        corInput.ddEventListener('click', verificar);
+
+        function verificar() {
+
+            let cor = corInput.value;
+        switch (cor) {
+            case "vermelho":
+                res.textContent = 'Pare!';
+                break;
+            case "verde":
+                res.textContent = 'Siga!';
+                break;
+            case "azul":
+                res.textContent = 'Atenção especial!';
+                break;
+            default:
+                res.textContent = 'Cor não reconhecida.';}
+        }
+
+        
+    </script>
+</body>
+</html>

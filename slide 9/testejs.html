@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testejs</title>
+</head>
+<body>
+    <header>
+        <h1>Teste exercício do slide 8 da aula 9</h1>
+    </header>
+    <main>
+        <label for="aula">Tem aula hoje:</label>
+        <input type="button" value="sim" id="sim">
+        <input type="button" value="não" id="nao">
+        <p id="res">...</p>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const btn1 = document.getElementById('sim').value;
+        const btn2 = document.getElementById('nao').value;
+        const res = document.getElementById('res');
+        sim.addEventListener('click', verificar);
+        nao.addEventListener('click', verificar);
+        function verificar (){
+
+            if(event.target.id === 'sim'){
+                res.textContent = `Acorda cedo!`
+            }else {
+                res.textContent = `Dormir mais!`
+            }
+        }
+
+    </script>
+</body>
+</html>

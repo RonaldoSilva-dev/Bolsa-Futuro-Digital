@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 2</title>
+</head>
+<body>
+    <header>
+        <h1>Exercício no slide 10 da aula 9</h1>
+    </header>
+    <main>
+        <label for="horas">Que horas:</label>
+        <input type="time" name="horas" id="horas">
+        <button type="button" id="btnHoras">Verificar</button>
+        <p id="res">...</p>        
+    </main>
+    <footer></footer>
+    <script>
+        const btnHoras = document.getElementById('btnHoras');
+        const res = document.getElementById('res');
+        const inputHoras = document.getElementById('horas');
+        //const inputHoras = document.getElementById('horas');
+
+        btnHoras.addEventListener('click', verificar);
+        
+        function verificar() {
+            // Obtém a string de tempo (ex: "08:30")
+            let horaString = inputHoras.value;
+            
+            // Verifica se a string de tempo está vazia
+            if (horaString === "") {
+                res.textContent = "Por favor, selecione uma hora.";
+                return; // Encerra a função se não houver valor
+            }
+
+            // Extrai as horas e converte para um número inteiro
+            let horas = parseInt(horaString.substring(0, 2));
+
+            // Lógica condicional correta usando o operador && (E lógico)
+            if (horas >= 4 && horas < 12) {
+                res.textContent = `Bom dia! Hora de tomar café.`;
+            } else if (horas >= 12 && horas < 18) {
+                res.textContent = `Boa tarde! Hora de almoçar.`;
+            } else {
+                res.textContent = `Boa noite! Hora de jantar.`;
+            }
+        }
+    </script>
+</body>
+</html>
