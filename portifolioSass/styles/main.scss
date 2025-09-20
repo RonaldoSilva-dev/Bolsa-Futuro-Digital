@@ -1,0 +1,10 @@
+@import 'variables'; 
+@import 'mixins'; 
+@import 'header'; 
+@import 'about'; 
+@import 'projects'; 
+@import 'contact'; 
+@import 'footer'; 
+* { box-sizing: border-box; margin: 0; padding: 0; } 
+body { font-family: $font-primary; font-size: $font-size-base; color: $text-color; 
+background: $background-color; }
